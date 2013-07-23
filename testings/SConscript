@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 Import("env")
-env.Append(LIBS=["gtest"])
+env.Append(LIBS=["gtest"], 
+		LIBPATH=['/usr/lib', '/usr/local/lib'])
 
 test_prog = env.Program("all_test", Glob("*.cpp"))
 Return("test_prog")
